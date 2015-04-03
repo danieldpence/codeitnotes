@@ -3,4 +3,5 @@ class Note < ActiveRecord::Base
     default_url: "http://placehold.it/350x250"
     validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
     
+    belongs_to :user
 end
