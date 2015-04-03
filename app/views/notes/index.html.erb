@@ -1,0 +1,10 @@
+<h1>Notes Index Placeholder</h1>
+
+<% @notes.each do |note| %>
+<div class="note">
+    <h3><%= link_to note.title, note %></h3>
+    <p><%= note.description %></p>
+</div>
+<% end %>
+
+<%= link_to "New Note", new_note_path %>
