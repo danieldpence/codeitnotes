@@ -1,7 +1,8 @@
 <h1>Note Show Page Placeholder</h1>
 
-<h3><%= @note.title %></h3>
+<h3><%= link_to @note.title, @note.link %></h3>
 <p><%= @note.description %></p>
+
 
 
 <%= link_to 'Edit', edit_note_path %> |
