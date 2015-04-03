@@ -3,6 +3,7 @@
 <% @notes.each do |note| %>
 <div class="note">
     <h3><%= link_to note.title, note %></h3>
+    <%= image_tag note.image.url(:small) %>
     <p><%= note.description %></p>
 </div>
 <% end %>
