@@ -1,0 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    border: none;
+    .nav-links {
+        color: #afafaf;
+        &:hover {
+            color: #444;
+            background-color: #FFF;
+        }
+    }
+}
+
+.navbar-brand {
+    background-color: #E7655B;
+    color: white;
+    font-weight: 300;
+    &:hover {
+        color: white;
+    }
+    
+}
