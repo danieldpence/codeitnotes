@@ -1,0 +1,16 @@
+nav {
+    border: none;
+}
+
+nav > ul > li > a {
+    color: #afafaf;
+    &:hover {
+        color: #444;
+    }
+}
+    
+.navbar-brand {
+    background-color: #E7655B;
+    color: white;
+    font-weight: 300;
+}

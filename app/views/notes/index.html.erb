@@ -1,11 +1,13 @@
-<h1>Notes Index Placeholder</h1>
-
-<% @notes.each do |note| %>
-<div class="note">
-    <h3><%= link_to note.title, note %></h3>
-    <%= image_tag note.image.url(:small) %>
-    <p><%= note.description %></p>
+<h1>All Notes</h1>
+<div class="notes">
+    <% @notes.each do |note| %>
+    <div class="note">
+        <%= image_tag note.image.url(:medium) %>
+        <h4><%= link_to note.title, note %></h4>
+        <p><%= note.description %></p>
+        <p>Shared by: <%= note.user.username %></p>
+    </div>
+    <% end %>
 </div>
-<% end %>
 
 <%= link_to "New Note", new_note_path %>
