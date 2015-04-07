@@ -47,6 +47,7 @@ class NotesController < ApplicationController
     end
     
     def note_params
-        params.require(:note).permit(:title, :description, :link, :image)
+        params.require(:note).permit(:title, :description, :link, :image, :tag_list
+        )
     end
 end
