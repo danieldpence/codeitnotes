@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>codeITnotes</title>
+  <title>codeitnotes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,7 +11,7 @@
   
   <header>
     <nav class="navbar">
-      <%= link_to '// codeitnotes', notes_path, class: "navbar-brand" %>
+      <%= link_to '// codeitnotes', root_path, class: "navbar-brand" %>
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
           <li><%= link_to current_user.username, edit_user_registration_path, class: "nav-links" %></li>

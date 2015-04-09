@@ -1,13 +1,15 @@
-
-<h3><%= link_to @note.title, @note.link %></h3>
-<%= image_tag @note.image.url(:large) %>
-<p><%= @note.description %></p>
-<p>
-    Tags: <% @note.tags.each do |tag| %>
-        <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
-</p>
-<p>Shared by: <%= @note.user.username %></p>
+<article class="note-show">
+    <h3><%= link_to @note.title, @note.link %></h3>
+    <figure>
+        <%= image_tag @note.image.url(:xlarge) %>
+        <p><%= @note.description %></p>
+    </figure>
+    <p>
+        Tags: <% @note.tags.each do |tag| %>
+            <%= link_to tag.name, tag_path(tag) %>
+        <% end %>
+    </p>
+    <p>Shared by: <%= @note.user.username %></p>
 
 
 <% if user_signed_in? %>
@@ -17,3 +19,4 @@
 <% end %>
 
 <%= link_to "All Notes", notes_path %>
+</article>
