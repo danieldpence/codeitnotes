@@ -1,17 +1,26 @@
 .notes {
     display: flex;
+    justify-content: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-content: flex-start;
     
 }
 
-.note {
+.note-wrapper {
+    display: inline-block;
+}
+.note-content {
     background-color: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px;
     text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
     width: 240px;
+    img {
+        border: 1px solid #e9e9e9;
+    }
 }
 

@@ -1,13 +1,19 @@
-<h1>All Notes</h1>
+
 <div class="notes">
     <% @notes.each do |note| %>
-    <div class="note">
-        <%= image_tag note.image.url(:medium) %>
-        <h4><%= link_to note.title, note %></h4>
-        <p><%= note.description %></p>
-        <p>Shared by: <%= note.user.username %></p>
+    <div class="note-wrapper">
+        <div class="note-content">
+            <%= image_tag note.image.url(:medium) %>
+            <h4><%= link_to note.title, note %></h4>
+            <p><%= note.description %></p>
+            <p>Shared by: <span><%= note.user.username %></span></p>
+        </div>
     </div>
+    
     <% end %>
 </div>
 
+<% if user_signed_in? %>
+
 <%= link_to "New Note", new_note_path %>
+<% end %>

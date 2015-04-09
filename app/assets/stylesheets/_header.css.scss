@@ -1,16 +1,26 @@
-nav {
+.navbar {
     border: none;
+    ul > li > a {
+        color: #afafaf;
+        &:hover, &:active, &:visited {
+            background-color: #E9E9E9;
+        }
+        &:hover {
+            color: #444;
+        }
+    }
 }
 
-nav > ul > li > a {
-    color: #afafaf;
-    &:hover {
-        color: #444;
-    }
+nav {
+    border: none;
 }
     
 .navbar-brand {
     background-color: #E7655B;
     color: white;
     font-weight: 300;
+    &:hover, &:active, &:visited {
+        color: white;
+    }
 }
+
