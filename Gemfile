@@ -12,7 +12,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'paperclip', "~> 4.2"
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'devise'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
