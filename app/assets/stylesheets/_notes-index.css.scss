@@ -1,7 +1,7 @@
 .notes {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
     
@@ -9,6 +9,7 @@
 
 .note-wrapper {
     display: inline-block;
+    width: 240px;
 }
 .note-content {
     background-color: #FFF;
