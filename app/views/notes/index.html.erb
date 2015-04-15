@@ -5,7 +5,7 @@
         <% @notes.each do |note| %>
         <div class="note-wrapper">
             <div class="note-content">
-                <%= image_tag note.image.url(:medium) %>
+                <%= image_tag note.image.url(:xlarge) %>
                 <h4><%= link_to note.title, note %></h4>
                 <p><%= note.description %></p>
                 <p>Shared by: <span><%= note.user.username %></span></p>
