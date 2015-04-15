@@ -1,19 +1,18 @@
 
-<div id="masonry" class="notes">
-    <% @notes.each do |note| %>
-    <div class="note-wrapper">
-        <div class="note-content">
-            <%= image_tag note.image.url(:medium) %>
-            <h4><%= link_to note.title, note %></h4>
-            <p><%= note.description %></p>
-            <p>Shared by: <span><%= note.user.username %></span></p>
+
+<div id="wrapper">
+    <div class="notes">
+        <% @notes.each do |note| %>
+        <div class="note-wrapper">
+            <div class="note-content">
+                <%= image_tag note.image.url(:medium) %>
+                <h4><%= link_to note.title, note %></h4>
+                <p><%= note.description %></p>
+                <p>Shared by: <span><%= note.user.username %></span></p>
+            </div>
         </div>
+        
+        <% end %>
     </div>
-    
-    <% end %>
 </div>
 
-<% if user_signed_in? %>
-
-<%= link_to "New Note", new_note_path %>
-<% end %>

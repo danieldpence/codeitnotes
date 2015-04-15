@@ -11,17 +11,20 @@
   
   <header>
     <nav class="navbar">
-      <%= link_to '// codeitnotes', root_path, class: "navbar-brand" %>
-      <ul class="nav navbar-nav pull-right">
-        <% if user_signed_in? %>
-          <li><%= link_to current_user.username, edit_user_registration_path, class: "nav-links" %></li>
-          <li><%= link_to 'Logout', destroy_user_session_path,
-              method: :delete, class: 'nav-links' %></li>
-        <% else %>
-          <li><%= link_to 'sign up', new_user_registration_path, class: "nav-links" %></li>
-          <li><%= link_to 'sign in', new_user_session_path, class: "nav-links" %></li>
-        <% end %>
-      </ul>
+    
+        <%= link_to '// codeitnotes', root_path, class: "navbar-brand" %>
+        <ul class="nav navbar-nav pull-right">
+          <% if user_signed_in? %>
+            <li><%= link_to 'New Note', new_note_path, class: "nav-links" %></li>        
+            <li><%= link_to current_user.username, edit_user_registration_path, class: "nav-links" %></li>
+            <li><%= link_to 'Logout', destroy_user_session_path,
+                method: :delete, class: 'nav-links' %></li>
+          <% else %>
+            <li><%= link_to 'sign up', new_user_registration_path, class: "nav-links" %></li>
+            <li><%= link_to 'sign in', new_user_session_path, class: "nav-links" %></li>
+          <% end %>
+        </ul>
+
     </nav>
   </header>
 <div class="flash">  
