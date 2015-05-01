@@ -21,3 +21,20 @@
 @import 'notes-show';
 @import 'footer';
 
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+.container {
+	min-height:100%;
+	position:relative;
+}
+
+// #content {
+// 	padding-bottom:100px;   /* Height of the footer element */
+// }
+
+

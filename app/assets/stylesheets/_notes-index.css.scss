@@ -17,6 +17,7 @@
 	-webkit-column-width: 275px;
       -moz-column-width: 275px;
           column-width: 275px;
+          padding-bottom: 20px; /*To prevent notes from overflowing footer */
 }
 
 .note-wrapper {
