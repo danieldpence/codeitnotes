@@ -1,7 +1,12 @@
 
 
 <div id="wrapper">
+    <% if user_signed_in? %>
+    <% else %>
+        <h1><span>Bookmarking</span> just got a whole lot more fun. Kinda.</h1>
+    <% end %>
     <div class="notes">
+        
         <% @notes.each do |note| %>
         <div class="note-wrapper">
             <div class="note-content">
